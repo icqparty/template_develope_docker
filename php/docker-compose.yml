@@ -1,0 +1,12 @@
+dev_php:
+  build: .
+  env_file:
+      - ./env.develope
+  ports:
+    - "80:8000"
+  working_dir: /var/www
+  volumes:
+    - .:/var/www
+  command:  php -S 0.0.0.0:8000 -t /var/www/public
+
+
